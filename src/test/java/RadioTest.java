@@ -14,6 +14,16 @@ public class RadioTest {
     }
 
     @Test
+    public void radioTest1() {
+        Radio radio = new Radio(10);
+
+        radio.setCurrentStation(8);
+        int expected = 8;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldLessThanTheMin() {
         Radio radio = new Radio();
 
@@ -45,6 +55,18 @@ public class RadioTest {
     }
 
     @Test
+    public void pressTheButtonNext3() {
+        Radio radio = new Radio(10);
+
+        radio.setCurrentStation(9);
+        radio.next();
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+
+    @Test
     public void pressTheButtonNext1() {
         Radio radio = new Radio();
 
@@ -69,6 +91,17 @@ public class RadioTest {
     @Test
     public void pressTheButtonPrev() {
         Radio radio = new Radio();
+
+        radio.setCurrentStation(0);
+        radio.prev();
+        int expected = 9;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void pressTheButtonPrev3() {
+        Radio radio = new Radio(10);
 
         radio.setCurrentStation(0);
         radio.prev();
