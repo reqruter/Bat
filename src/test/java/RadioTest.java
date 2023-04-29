@@ -12,6 +12,7 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void radioTest1() {
         Radio radio = new Radio(10);
@@ -21,6 +22,7 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldLessThanTheMin() {
         Radio radio = new Radio();
@@ -51,6 +53,7 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void pressTheButtonNext3() {
         Radio radio = new Radio(10);
@@ -95,6 +98,7 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void pressTheButtonPrev3() {
         Radio radio = new Radio(10);
@@ -105,6 +109,7 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void pressTheButtonPrev1() {
         Radio radio = new Radio();

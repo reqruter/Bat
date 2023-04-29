@@ -7,13 +7,13 @@ public class Radio {
         this.maxStation = 9;
     }
 
-    public Radio  (int stationCount) {
-        this.maxStation=stationCount-1;
+    public Radio(int stationCount) {
+        this.maxStation = stationCount - 1;
     }
 
 
     public void next() {
-        if (currentStation !=maxStation) {
+        if (currentStation != maxStation) {
             currentStation++;
             return;
         }
